@@ -6,10 +6,12 @@
  *   Legal ops: ~ &
  *   Max ops: 8
  *   Rating: 1
+ x|y = ~(~x & ~y)
+ ~(x|y) = ~x & ~y
  */
 int bitNor(int x, int y)
 {
-    return 2;
+    return (~x & ~y);
 }
 
 int test_bitNor(int x, int y)
@@ -20,7 +22,7 @@ int test_bitNor(int x, int y)
 int main(void)
 {
     int x = 0;
-    int y = 0;
+    int y = 5;
     printf("expected: %x\n", bitNor(x, y));
     printf("actual  : %x\n", test_bitNor(x, y));
 }

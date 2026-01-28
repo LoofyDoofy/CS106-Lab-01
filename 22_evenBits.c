@@ -6,9 +6,11 @@
  *   Max ops: 8
  *   Rating: 1
  */
+ // 1010 1010 1010 1010 1010 1010 1010 1010
+ // 5 -> 0101
 int evenBits(void)
 {
-    return 2;
+    return (0x5555 << 16) | (0x5555);
 }
 
 int test_evenBits(void)
